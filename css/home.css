@@ -1,0 +1,360 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root{
+    --bg:rgb(255, 187, 0);
+    --layer:rgba(199, 147, 4, 0.336);
+}
+
+
+body {
+    background: linear-gradient(to right, rgb(255, 187, 0), black);
+}
+
+header {
+    background-color: black;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+
+}
+
+nav h3{
+    color: rgb(255, 187, 0);
+}
+li a{
+    text-decoration: none;
+    color: white;
+    transition: all .3s ease;
+}
+
+
+li a:hover{
+    color: var(--bg);
+}
+
+li:nth-child(5) a{
+    color: var(--bg)
+}
+
+li:nth-child(5) a:hover{
+    color: white;
+}
+
+/* navigator */
+
+.container {
+    display: flex;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content{
+    display: flex;
+    padding-top: 4rem;
+    justify-content: space-around;
+    height: 30vw;
+    align-items: center;
+    background-color: var(--layer);
+
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.pfp img{
+    border-radius: 50%;
+    position: relative;
+    height: auto;
+    width: 300px;
+    position: relative;
+}
+
+.info h2{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+.info h1{
+    color: white;
+    font-size: 3rem;
+    margin-bottom: .5rem;
+}
+
+.info h1 span{
+    color: black;
+}
+
+.info q {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* first line */
+
+.wrap {
+    background-color: var(--layer);
+    width: 90%;
+    margin: 0 auto;
+    padding: 4rem;
+    border-radius: 2rem;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    align-items: center;
+    gap: 1rem;
+}
+
+button {
+    padding: .5rem;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    background-color: var(--bg);
+    width: 10rem;
+    transition: all .3s ease;
+}
+
+button:hover {
+    color: var(--bg);
+    background-color: black;
+}
+
+/* popup */
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)scale(0);
+    background-color: var(--bg);
+    width: 70vw;
+    height: 80vh;
+    z-index: 2;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    background-color: rgb(54, 54, 54);
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.popup .close-btn:hover {
+    color: var(--bg);
+    background-color: black;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content-2 {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%)scale(1);
+
+}
+
+/* schedule */
+
+.schedule {
+    position: relative;
+    height: 65vh;
+    width: 100%;
+    background-color: white;
+}
+
+.schedule .schedule th, .schedule td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.schedule th {
+    background-color: rgb(51, 50, 50);
+    padding: 1rem .5rem;
+    color: var(--bg);
+
+}
+
+.weekday {
+    color: var(--bg);
+    background-color: rgb(51, 50, 50);
+
+}
+
+/* balance */
+
+.balancetable {
+    background-color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.balancetable table {
+    width: 100%;
+    height: 65vh;
+    background-color: white;
+}
+
+.balancetable table,
+.balancetable th, 
+.balancetable td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.balancetable th,td {
+    padding: 1rem;
+}
+
+.balancetable th {
+    text-align: start;
+    background-color: rgb(51, 50, 50);
+    color: var(--bg);
+}
+
+/* instructors */
+
+.instructtable {
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    background-color: white;
+    padding: 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.instructtable .imgs {
+    background-color: gray;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 2px solid orange;
+}
+
+.imgs img {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid orange;
+}
+
+.instructtable p {
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+
+.instructtable p span {
+    font-weight: bold;
+}
+
+
+/* info profile */
+   
+
+
+.infotable {
+    display: flex;
+    background-color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+    gap: 1.5rem;
+}
+
+.infotable table {
+    flex: 1;
+}
+
+.infotable table,
+.infotable th,
+.infotable td {
+    border: 2px solid  black;
+    border-collapse: collapse;
+} 
+
+.infotable th {
+    color: var(--bg);
+    background-color: rgb(51, 50, 50);
+    padding: 10px 0px;
+}
+
+
+.profile img {
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.profile {
+    text-align: center;
+    background-color: rgb(216, 215, 215);
+    padding: 1rem;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <title>Home</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h3>
+                UA
+            </h3>
+            <ul>
+                <li><a href="home.html" style="color: var(--bg)">Home</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="grades.html">Grades</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="logout.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <div class="wrapper">
+                <div class="pfp">
+                    <img src="img/pfp.png" alt="Profile">
+                </div>
+                <div class="info">
+                    <h2>Ashlee Jaucian</h2>
+                    <h1>Hero Name: <span>All Might</span></h1>
+                    <q>Push your limit, and never give up</q>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="img/uahighlogo.png" alt="Logo">
+            </div>
+        </div>
+
+        <div class="wrap">
+            <div class="buttons">
+                <div class="box">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 -960 960 960" width="80">
+                        <path
+                            d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z" />
+                    </svg>
+                    <button onclick="togglepopupSchedule()">Schedule</button>
+                </div>
+                <div class="box">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 -960 960 960" width="80">
+                        <path
+                            d="M441-120v-86q-53-12-91.5-46T293-348l74-30q15 48 44.5 73t77.5 25q41 0 69.5-18.5T587-356q0-35-22-55.5T463-458q-86-27-118-64.5T313-614q0-65 42-101t86-41v-84h80v84q50 8 82.5 36.5T651-650l-74 32q-12-32-34-48t-60-16q-44 0-67 19.5T393-614q0 33 30 52t104 40q69 20 104.5 63.5T667-358q0 71-42 108t-104 46v84h-80Z" />
+                    </svg>
+                    <button onclick="togglepopupBalance()">Balance</button>
+                </div>
+                <div class="box">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 -960 960 960" width="80">
+                        <path
+                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+                    </svg>
+                    <button onclick="togglepopupInstructor()">Instructor</button>
+
+                </div>
+                <div class="box">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="80" viewBox="0 -960 960 960" width="80">
+                        <path
+                            d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                    </svg>
+                    <button onclick="togglepopupInformation()">Information</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content-2"> 
+            <div class="close-btn" onclick="togglepopupSchedule()">&times;</div>
+            <h1>Class Schedule</h1>
+            <br>
+            <div class="scheduletable"> 
+                <table class="schedule">
+                    <thead>
+                        <tr>
+                            <th>DAY/HOUR</th>
+                            <th>8:00AM - 9:00AM</th>
+                            <th>8:00AM - 9:00AM</th>
+                            <th>8:00AM - 9:00AM</th>
+                            <th>8:00AM - 9:00AM</th>
+                            <th>8:00AM - 9:00AM</th>
+                            <th>8:00AM - 9:00AM</th>
+                            <th>8:00AM - 9:00AM</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="weekday">Monday</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                        </tr>
+                        <tr>
+                            <td class="weekday">Tuesday</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                        </tr>
+                        <tr>
+                            <td class="weekday">Wednesday</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                        </tr>
+                        <tr>
+                            <td class="weekday">Thursday</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                        </tr>
+                        <tr>
+                            <td class="weekday">Friday</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                        </tr>
+                        <tr>
+                            <td class="weekday">Saturday</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                            <td>Sample Value</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-2">
+        <div class="overlay"></div>
+        <div class="content-2">
+            <div class="close-btn" onclick="togglepopupBalance()">&times;</div>
+            <h1>Current Balance</h1>
+            <br>
+            <div class="balancetable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id No: </th>
+                            <th>112765</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Name: </td>
+                            <td>sample Value</td>
+                        </tr>
+                        <tr>
+                            <td>Department: </td>
+                            <td>sample Value</td>
+                        </tr>
+                        <tr>
+                            <td>Semester:</td>
+                            <td>sample Value</td>   
+                        </tr>
+                        <tr>
+                            <td>Balance:</td>
+                            <td>sample Value</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-3">
+        <div class="overlay"></div>
+        <div class="content-2">
+            <div class="close-btn" onclick="togglepopupInstructor()">&times;</div>
+            <h1>Instructor</h1>
+            <br>
+            <div class="instructtable">
+                <div class="imgs">
+                    <img src="img/hawks.jpg" alt="">
+                    <p>Hero Name: <span>Hawks</span></p>
+                    <p>Name: <span>Kenji Sual</span></p>
+                </div>
+                <div class="imgs">
+                    <img src="img/mirio.png" alt="">
+                    <p>Hero Name: <span>Lemilion</span></p>
+                    <p>Name: <span>Jasper Montefalcon</span></p>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <div class="popup" id="popup-4">
+        <div class="overlay"></div>
+        <div class="content-2">
+            <div class="close-btn" onclick="togglepopupInformation()">&times;</div>
+            <h1>Personal Information</h1>
+            <br>
+            <div class="infotable">
+                <div class="profile">
+                    <img src="img/pfp.png" alt="">
+                    <h1>Perez, Ashlee Jaucian</h1>
+                    <h3>ID: 2111859</h3>
+                    <br>
+                    <h3>Quirk: All For One</h3>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Hero Name: </th>
+                            <th>All Migth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>year:</td>
+                            <td>Sample</td>
+                        </tr>
+                        <tr>
+                            <td>Department:</td>
+                            <td>Sample</td>
+                        </tr>
+                        <tr>
+                            <td>Gender:</td>
+                            <td>Sample</td>
+                        </tr>
+                        <tr>
+                            <td>Age:</td>
+                            <td>Sample</td>
+                        </tr>
+                        <tr>
+                            <td>Birthday:</td>
+                            <td>Sample</td>
+                        </tr>
+                        <tr>
+                            <td>Status:</td>
+                            <td>Sample</td>
+                        </tr>
+                        <tr>
+                            <td>Nationality:</td>
+                            <td>Sample</td>
+                        </tr>
+                        <tr>
+                            <td>Address:</td>
+                            <td>Sample</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
